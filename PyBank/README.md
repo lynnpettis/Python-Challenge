@@ -33,8 +33,47 @@ The program will analyze the the records to calculate each of the following:
 
 ## The journey
 
-Detail the journey creating the program here.
+The simple flow for the program
 
-Be sure to include any design decisions you make and the thought process behind the decision.
+import necessary modules
 
+create the csv path
+
+open and use the input file
+
+  create the csvreader
   
+  read the header line and discard
+  
+  Initialize several variables used in the loop to process the data
+  
+  loop through the file one row at a time
+  
+  increment RowCount by 1, this will also be the number of Months
+  
+  if RowCount is 1
+    gather initial values
+      CurrentValue
+      TotalValue
+      default values for greatest increase and decrease
+      
+  else
+    begin computing data
+      PreviousValue = CurrentValue
+      CurrentValue = newvalue from file
+      compute change in value CurrentValue - PreviousValue
+      Append change value to change list
+      increment total value by Current value
+      determine if there is a change in the greatest increase or decrease
+        and capture that data
+
+Upon exiting the loop sum the changes and determine how many values
+compute the average change
+
+Print the results to the terminal
+print the results to a file
+
+## Problems along the way
+
+The problems alone the way were mostly simple typing errors.  The logic
+worked as expected.
